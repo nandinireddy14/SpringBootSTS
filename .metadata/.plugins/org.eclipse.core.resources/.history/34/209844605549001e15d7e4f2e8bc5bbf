@@ -1,0 +1,5 @@
+package cgg.spring.file.payload;
+
+public class FileResponse {
+
+}

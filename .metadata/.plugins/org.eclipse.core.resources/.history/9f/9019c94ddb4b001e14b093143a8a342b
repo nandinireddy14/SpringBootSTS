@@ -1,0 +1,9 @@
+package cgg.spring.restserver.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import cgg.spring.restserver.entities.User1;
+
+public interface UserRepository extends JpaRepository<User1, Integer> {
+
+}

@@ -1,0 +1,5 @@
+package cgg.spring.securitydb.entities;
+
+public class User1 {
+
+}

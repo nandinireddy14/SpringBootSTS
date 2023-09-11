@@ -1,0 +1,21 @@
+package cgg.spring.restserver.entities;
+
+import jakarta.persistence.Entity;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+public class User1 {
+
+	private int id;
+	private String name;
+	private String email;
+	private String password;
+	private String about;
+	
+	
+}

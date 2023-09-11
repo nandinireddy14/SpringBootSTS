@@ -1,0 +1,5 @@
+spring.datasource.name=springbootjdbc
+spring.datasource.url=jdbc:postgresql://localhost:5432/springbootjdbc
+spring.datasource.username=postgres
+spring.datasource.password=nandini14
+spring.datasource.driver-class-name=org.postgresql.Driver

@@ -1,0 +1,13 @@
+package cgg.spring.rest.entities;
+
+@Entity
+public class Author {
+	
+	@Id
+	@GenerationValue(strategy=GenerationType
+	
+	private int authorId;
+	private String firstName;
+	private String lastName;
+	private String language;
+}

@@ -1,0 +1,5 @@
+package cgg.spring.restserver.controllers;
+
+public class UserController {
+
+}

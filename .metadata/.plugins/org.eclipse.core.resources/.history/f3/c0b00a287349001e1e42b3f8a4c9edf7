@@ -1,0 +1,16 @@
+package cgg.spring.problemdetails.exceptions;
+
+import org.springframework.http.ProblemDetail;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+
+	//handler for 
+	@ExceptionHandler(AgeNotValidException.class)
+	public ResponseEntity<ProblemDetail> handleAgeNotValidException(AgeNotValidException ){
+		
+	}
+}

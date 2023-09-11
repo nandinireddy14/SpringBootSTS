@@ -1,0 +1,6 @@
+package cgg.spring.server.entities;
+
+public record LoginData(String username,String email,boolean agreed) {
+	
+
+}

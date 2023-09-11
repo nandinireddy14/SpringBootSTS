@@ -1,0 +1,6 @@
+package cgg.spring.restserver.validations;
+
+
+public @interface ImageNameValid {
+
+}

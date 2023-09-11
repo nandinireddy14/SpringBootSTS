@@ -1,0 +1,22 @@
+package cgg.spring.server.entities;
+
+import jakarta.validation.constraints.AssertTrue;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+
+public class LoginData {
+	@NotBlank(message = "user name cannot be empty")
+	@Size(min = 3, max = 12, message = "user name must be 3-12 characters")
+	private String username;
+@Pattern(regexp="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$",message="Invalid Email")
+String email,
+@AssertTrue(message="must agree terms and conditions")
+boolean agreed)
+	{
+
+	public LoginData() {
+		this("", "", false);
+	}
+
+}

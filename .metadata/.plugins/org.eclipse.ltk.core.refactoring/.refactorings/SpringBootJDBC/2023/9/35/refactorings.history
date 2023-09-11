@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;UserController.java&apos; to &apos;SpringBootJDBC/src/main/java/cgg.spring.jdbc.controllers&apos;&#x0D;&#x0A;- Original project: &apos;SpringBootJDBC&apos;&#x0D;&#x0A;- Destination element: &apos;SpringBootJDBC/src/main/java/cgg.spring.jdbc.controllers&apos;&#x0D;&#x0A;- Original element: &apos;cgg.spring.jdbc.UserController.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;cgg.spring.jdbc.controllers" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;cgg.spring.jdbc{UserController.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1693653534698" units="1" version="1.0"/>
+</session>

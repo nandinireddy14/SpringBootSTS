@@ -1,0 +1,5 @@
+package cgg.spring.jdbc.entities;
+
+public class User1 {
+
+}

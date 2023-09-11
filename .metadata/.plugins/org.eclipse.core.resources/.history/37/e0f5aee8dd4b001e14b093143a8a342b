@@ -1,0 +1,5 @@
+package cgg.spring.restserver.exceptions;
+
+public class GlobalExceptionHandler {
+
+}

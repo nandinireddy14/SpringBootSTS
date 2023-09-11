@@ -1,0 +1,5 @@
+package cgg.spring.problemdetails.exceptions;
+
+public class AgeNotValidException {
+
+}

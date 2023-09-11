@@ -1,0 +1,16 @@
+package cgg.spring.restserver.dao;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import cgg.spring.restserver.entities.User1;
+
+public interface UserRepository extends JpaRepository<User1, Integer> {
+	@Query("select * from User1")
+	List<User1> getAllUsers();
+	@Query("select * from User1 where id=:n")
+	User1 getUserById(int id);
+
+}

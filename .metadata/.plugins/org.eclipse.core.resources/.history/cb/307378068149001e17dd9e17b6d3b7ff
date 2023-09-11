@@ -1,0 +1,28 @@
+package cgg.spring.jdbc;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import cgg.spring.jdbc.entities.User1;
+
+@RestController
+public class UserController {
+
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+
+	@GetMapping("/users")
+	public ResponseEntity<List<User1>> getAllUsers() {
+		
+		jdbcTemplate.query("SELECT * from user1",new BeanPropertyRowMapper<User1>(User1.class));
+		
+		return null;
+
+	}
+}

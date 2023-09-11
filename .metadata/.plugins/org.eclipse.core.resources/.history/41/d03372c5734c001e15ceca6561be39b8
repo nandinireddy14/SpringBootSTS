@@ -1,0 +1,45 @@
+package cgg.spring.restserver.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cgg.spring.restserver.dao.UserRepository;
+import cgg.spring.restserver.dto.UserDto;
+import cgg.spring.restserver.entities.User1;
+
+@Service
+public class UserService {
+	@Autowired
+	private static UserRepository userRepo;
+
+	public static UserDto getUserById(int id) {
+		return userRepo.findById(id).get();
+		
+	}
+
+	public static List<UserDto> getAllUsers() {
+		
+		return userRepo.findAll();
+	}
+
+	public static UserDto addUser(UserDto userDto) {
+		userRepo.save(userDto);
+		return userDto;
+	}
+	public UserDto updateUser(UserDto userDto,int userId) {
+		return userDto;
+	}
+	public void deleteUser(UserDto userDto) {
+		
+	}
+	public User1 UserDtoToUser(UserDto userDto) {
+		User1 user1 = new User1();
+		user1.setId(userDto.getId());
+	}
+	
+	
+	
+
+}

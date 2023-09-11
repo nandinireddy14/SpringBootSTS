@@ -1,0 +1,38 @@
+package cgg.spring.securitydb;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import cgg.spring.securitydb.dao.UserRepository;
+import cgg.spring.securitydb.entities.Role;
+import cgg.spring.securitydb.entities.User1;
+
+@SpringBootApplication
+public class SpringSecurityDbApplication implements CommandLineRunner{
+
+	
+	@Autowired
+	private UserRepository userRepo;
+	
+	@Autowired
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(SpringSecurityDbApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		User1 user1 = new User1();
+		user1.setUsername("abc");
+		user1.setPassword(bCryptPasswordEncoder.encode("abc"));
+		user1.setRole(new Role(1,"ROLE_NORMAL"));
+		
+		userRepo.save(user1);
+		
+	}
+
+}

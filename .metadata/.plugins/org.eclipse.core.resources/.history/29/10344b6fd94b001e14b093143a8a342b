@@ -1,0 +1,5 @@
+package cgg.spring.restserver.dto;
+
+public class UserDto {
+
+}

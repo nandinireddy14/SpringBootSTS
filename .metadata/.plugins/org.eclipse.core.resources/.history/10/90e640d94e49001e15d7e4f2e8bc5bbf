@@ -1,0 +1,14 @@
+package cgg.spring.rest.entities;
+
+//@Data
+//@AllArgsConstructor
+@Entity
+public class Book {
+	@Id
+	@GenerationValue(strategy = GenerationType.AUTO)
+	@Column(name = "book_id")
+	private int bookId;
+	private String title;
+	private String author;
+
+}

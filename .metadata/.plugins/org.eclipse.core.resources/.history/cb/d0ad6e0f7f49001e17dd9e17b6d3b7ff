@@ -1,0 +1,5 @@
+package cgg.spring.jdbc;
+
+public class UserController {
+
+}

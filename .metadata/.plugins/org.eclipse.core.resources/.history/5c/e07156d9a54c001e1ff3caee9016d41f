@@ -1,0 +1,5 @@
+package cgg.spring.securitydb.config;
+
+public class MySecurityConfig {
+
+}

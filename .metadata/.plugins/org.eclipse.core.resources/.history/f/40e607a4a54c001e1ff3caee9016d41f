@@ -1,0 +1,5 @@
+package cgg.spring.securitydb.config;
+//nandini
+public class MySecurityConfig {
+
+}

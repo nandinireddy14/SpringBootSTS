@@ -1,0 +1,43 @@
+package cgg.spring.problemdetails.controllers;
+
+import java.net.URI;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ProblemDetail;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import cgg.spring.problemdetails.services.VoteService;
+
+@RestController
+@RequestMapping("/vote")
+public class VoteController {
+
+	@Autowired
+	private VoteService voteService;
+	
+	@PostMapping
+	public ResponseEntity<?> vote(@RequestParam("age") int age){
+		
+		if(age>18) {
+			this.voteService.vote(age);
+			return ResponseEntity.ok("voted");
+			
+		}
+		else {
+			ProblemDetail details =  ProblemDetail.forStatus(HttpStatus.INTERNAL_SERVER_ERROR);
+			details.setTitle("Age not valid");
+			details.setDetail("age is not valid to cast vote");
+			details.setType(URI.create("http:/localhost:8080/errors"));
+			details.setProperty("host", "localhost");
+			details.setProperty("port",8080);
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(details);
+		}
+		
+		
+	}
+}

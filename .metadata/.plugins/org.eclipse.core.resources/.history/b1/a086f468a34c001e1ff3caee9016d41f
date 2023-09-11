@@ -1,0 +1,5 @@
+package cgg.spring.securitydb.services;
+
+public class UserService {
+
+}

@@ -1,0 +1,45 @@
+package cgg.spring.restserver.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import cgg.spring.restserver.dao.UserRepository;
+import cgg.spring.restserver.entities.User1;
+
+@Service
+public class UserService {
+	@Autowired
+	private UserRepository userRepository;
+
+	
+	
+	
+	@GetMapping("/users")
+	public ResponseEntity<List<User1>> getAllUsers() {
+		List<User1> list = userService.getAllUsers();
+		return new ResponseEntity<>(list, HttpStatus.OK);
+
+	}
+
+	@GetMapping("/users/{id}")
+	public ResponseEntity<User1> getUserById(@PathVariable("id") int id) {
+		User1 user = null;
+		try {
+			userService.getUserById(id);
+			return new ResponseEntity<User1>(user, HttpStatus.OK);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		}
+
+	}
+	
+	@PostMapping("/users")
+	public ResponseEntity<User1> addUser(@RequestBody)
+}

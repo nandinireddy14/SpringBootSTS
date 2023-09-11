@@ -1,0 +1,21 @@
+package cgg.spring.securitydb.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+
+import cgg.spring.securitydb.services.CustomUserDetailsService;
+
+@Configuration
+public class MySecurityConfig {
+
+	@Autowired
+	private CustomUserDetailsService customUserDetailsService;
+	
+	public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws IOException{
+		httpSecurity.csrf().disable().authorizeHttpRequests().requestMatchers("/signin").permitAll()
+		.requestMatchers("/logout").permitAll()
+		.requestMatchers("/public/**").hasRole("ADMIN")
+		.requestMatchers("/users/**").hasRole("ADMIN")
+	}
+}

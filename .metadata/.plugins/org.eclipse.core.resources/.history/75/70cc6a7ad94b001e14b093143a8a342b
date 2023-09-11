@@ -1,0 +1,8 @@
+package cgg.spring.restserver.dto;
+
+import lombok.Data;
+
+@Data
+public class UserDto {
+
+}

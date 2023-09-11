@@ -1,0 +1,5 @@
+package cgg.spring.restserver.payload;
+
+public class ApiResponse {
+
+}

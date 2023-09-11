@@ -1,0 +1,5 @@
+package cgg.spring.securitydb.dao;
+
+public class UserRepository {
+
+}

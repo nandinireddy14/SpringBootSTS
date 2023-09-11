@@ -1,0 +1,5 @@
+package cgg.spring.problemdetails.services;
+
+public class VoteService {
+
+}

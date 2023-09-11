@@ -1,0 +1,5 @@
+package cgg.spring.problemdetails.controllers;
+
+public class VoteController {
+
+}

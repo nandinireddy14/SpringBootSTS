@@ -1,0 +1,17 @@
+package cgg.spring.securitydb.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+
+import cgg.spring.securitydb.services.CustomUserDetailsService;
+
+@Configuration
+public class MySecurityConfig {
+
+	@Autowired
+	private CustomUserDetailsService customUserDetailsService;
+	
+	public SecurityFilterChain filterChain(){
+		httpSecurity
+	}
+}

@@ -1,0 +1,5 @@
+package cgg.spring.restserver.entities;
+
+public class User1 {
+
+}

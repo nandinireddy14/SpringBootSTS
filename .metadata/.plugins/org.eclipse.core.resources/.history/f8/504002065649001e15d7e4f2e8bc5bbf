@@ -1,0 +1,5 @@
+package cgg.spring.file.services;
+
+public class FileService {
+
+}

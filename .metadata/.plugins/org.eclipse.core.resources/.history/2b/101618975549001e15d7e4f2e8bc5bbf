@@ -1,0 +1,19 @@
+package cgg.spring.file.controllers;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import cgg.spring.file.payload.FileResponse;
+
+@RestController
+@RequestMapping("/file")
+public class FileUploadController {
+
+	@PostMapping("/upload")
+	public ResponseEntity<FileResponse> fileUpload(){
+		
+	}
+	
+}

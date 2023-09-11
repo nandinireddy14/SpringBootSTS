@@ -1,0 +1,10 @@
+package cgg.spring.jdbc;
+
+@RestController
+public class UserController {
+
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
+	public ResponseEntity<List<User1>>
+}

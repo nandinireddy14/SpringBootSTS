@@ -1,0 +1,5 @@
+package cgg.spring.rest.dao;
+
+public class BookRepository {
+
+}
